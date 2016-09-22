@@ -1,0 +1,29 @@
+<template>
+  <div class="aid-title hidden-xs">
+    <i class="fa fa-history"></i> Draft History
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <button class="btn btn-sm btn-info btn-responsive" ng-disabled="drafted.length === 0" ng-click="undraft()">
+        <i class="fa fa-backward"></i> Undo
+      </button>
+      <button class="pull-right btn btn-sm btn-warning btn-responsive" ng-click="restart()">
+        <i class="fa fa-eject"></i> Restart
+      </button>
+    </div>
+  </div>
+
+  <div class="scrollable draft-history">
+    <table class="table table-condensed table-hover table-striped">
+      <tbody>
+        <tr ng-repeat="player in drafted | orderBy:'drafted':true">
+          <td>{{player.drafted}}</td>
+          <td>{{player.name}}</td>
+          <td>{{player.position}}</td>
+          <td>{{draftGrade(player)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>

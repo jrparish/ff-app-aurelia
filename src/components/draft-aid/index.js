@@ -1,5 +1,5 @@
 import { inject } from 'aurelia-framework';
-import { RankingService } from './services/ranking';
+import { RankingService } from 'services/ranking';
 
 @inject(RankingService)
 export class DraftAid {

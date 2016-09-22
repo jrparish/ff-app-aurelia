@@ -10,19 +10,19 @@ export class App {
       {
         route: ['', 'draft-aid'],
         name: 'draft-aid',
-        moduleId: 'draft-aid',
+        moduleId: 'components/draft-aid/index',
         nav: true
       },
       {
         route: 'rankings',
         name: 'rankings',
-        moduleId: 'rankings',
+        moduleId: 'components/rankings/index',
         nav: true
       },
       {
         route: 'about',
         name: 'about',
-        moduleId: 'about',
+        moduleId: 'components/about/index',
         nav: true
       }
     ]);
